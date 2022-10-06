@@ -12,4 +12,9 @@ public class CalculatorController {
 	public String test() {
 		return "HELLO WORLD";
 	}
+	
+	@RequestMapping(path = "/test2", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public String test2() {
+		return "HELLO WORLD";
+	}
 }

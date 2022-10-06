@@ -35,4 +35,12 @@ public class CalculatorControllerTest {
            .andExpect(content().contentType("application/json"));
 
     }
+    @Test
+    public void test2() throws Exception {
+        this.mockMvc.perform(get("/test")
+           .accept(MediaType.parseMediaType(MediaType.APPLICATION_JSON_VALUE)))
+           .andExpect(status().isOk())
+           .andExpect(content().contentType(MediaType.APPLICATION_ATOM_XML));
+
+    }
 }
